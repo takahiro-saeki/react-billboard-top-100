@@ -1,7 +1,12 @@
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import Samples from '../component/Samples';
+function sample(state = 2, action) {
+  switch (action.type) {
+    case 'CREATE_TEST':
+      return true
+    case 'CREATE_SAM':
+      return false
+    default:
+      return state;
+  }
+}
 
-let Sample = connect()(Samples);
-
-export default Sample;
+export default sample;

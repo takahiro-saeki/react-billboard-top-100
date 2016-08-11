@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
-//import createCount from './create'
+import main from './main'
+import sample from './sample'
 
 export const allMethod = combineReducers({
-
+  main: main,
+  sample: sample,
+  routing: routerReducer
 })

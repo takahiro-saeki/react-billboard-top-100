@@ -1,7 +1,12 @@
-import React, {Component} from 'react';
-import { connect } from 'react-redux';
-import Test from '../component/Test';
+function sample(state = 1, action) {
+  switch (action.type) {
+    case 'CREATE_MAIL':
+      return {pass: state.pass, mail: action.mail}
+    case 'CREATE_PASS':
+      return {pass: action.pass, mail: state.mail}
+    default:
+      return state;
+  }
+}
 
-let Mains = connect()(Test);
-
-export default Mains;
+export default sample;
